@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #ff9891;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: "Bangers", serif;
+    font-size: 3em;
+    font-weight: 100;
+    color: rgb(139, 52, 52);
+}
+
+#choices-container{
+    width: 310px;
+    height: 100px;
+}
+
+.big-images{
+    width: 250px;
+    height: 250px;
+}
+
+.images{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
