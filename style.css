@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 body{
     background-color: #ff9891;
     display: flex;
@@ -8,7 +10,15 @@ body{
     justify-content: center;
 }
 
+#desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 h1{
+    -webkit-text-stroke: 2px whitesmoke;
     font-family: "Bangers", serif;
     font-size: 3em;
     font-weight: 100;
@@ -20,13 +30,41 @@ h1{
     height: 100px;
 }
 
-.big-images{
-    width: 250px;
-    height: 250px;
+.big-images {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.big-images.change {
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.score-change {
+    animation: pop 0.3s ease-in-out;
+}
+
+
+
 
 .images{
     cursor: pointer;
     width: 100px;
     height: 100px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.images:hover{
+    transform: scale(1.2);
+}
+
+.images:active{
+    transform: scale(1.3);
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
 }
